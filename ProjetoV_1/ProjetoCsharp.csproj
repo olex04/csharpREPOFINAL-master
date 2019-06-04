@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95D6FFBF-593F-4939-905C-962C276A6536}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoV_1</RootNamespace>
+    <AssemblyName>ProjetoV_1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCarroAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCarroAluguer.Designer.cs">
+      <DependentUpon>AddCarroAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminarCarroOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminarCarroOficina.Designer.cs">
+      <DependentUpon>ExaminarCarroOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCarroOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCarroOficina.Designer.cs">
+      <DependentUpon>AddCarroOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCarroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCarroVenda.Designer.cs">
+      <DependentUpon>AddCarroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCliente.Designer.cs">
+      <DependentUpon>AddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVenda.Designer.cs">
+      <DependentUpon>AddVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminarServico.Designer.cs">
+      <DependentUpon>ExaminarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarServico.Designer.cs">
+      <DependentUpon>AdicionarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aluguer.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDeDados.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDados.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDeDados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDeDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Carro.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarroAluguer.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarroOficina.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarroVenda.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Administrador.cs" />
+    <Compile Include="Classes\Aluguer.cs" />
+    <Compile Include="Classes\Carro.cs" />
+    <Compile Include="Classes\CarroAluguer.cs" />
+    <Compile Include="Classes\CarroOficina.cs" />
+    <Compile Include="Classes\CarroVenda.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\MailerAluguer.cs" />
+    <Compile Include="Classes\MailOficina.cs" />
+    <Compile Include="Classes\MailVendas.cs" />
+    <Compile Include="Classes\Parcela.cs" />
+    <Compile Include="Classes\Servico.cs" />
+    <Compile Include="Classes\Venda.cs" />
+    <Compile Include="Cliente.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCarroAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCarroAluguer.Designer.cs">
+      <DependentUpon>EditarCarroAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCarroOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCarroOficina.Designer.cs">
+      <DependentUpon>EditarCarroOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCarroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCarroVenda.Designer.cs">
+      <DependentUpon>EditarCarroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarParcela.Designer.cs">
+      <DependentUpon>EditarParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarServico.Designer.cs">
+      <DependentUpon>EditarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarVendas.Designer.cs">
+      <DependentUpon>EditarVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscolherEmailParaEnviar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EscolherEmailParaEnviar.Designer.cs">
+      <DependentUpon>EscolherEmailParaEnviar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminarAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminarAluguer.Designer.cs">
+      <DependentUpon>ExaminarAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminarCarroAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminarCarroAluguer.Designer.cs">
+      <DependentUpon>ExaminarCarroAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExaminarVenda.Designer.cs">
+      <DependentUpon>ExaminarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoDeAdministradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoDeAdministradores.Designer.cs">
+      <DependentUpon>GestaoDeAdministradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoDeVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoDeVendas.Designer.cs">
+      <DependentUpon>GestaoDeVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoDeAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoDeAluguer.Designer.cs">
+      <DependentUpon>GestaoDeAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoDeOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoDeOficina.Designer.cs">
+      <DependentUpon>GestaoDeOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoDeClientes.Designer.cs">
+      <DependentUpon>GestaoDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_inicial.Designer.cs">
+      <DependentUpon>Menu_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parcela.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjetoCsharDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetoCsharDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servico.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Venda.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCarroAluguer.resx">
+      <DependentUpon>AddCarroAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminarCarroOficina.resx">
+      <DependentUpon>ExaminarCarroOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCarroOficina.resx">
+      <DependentUpon>AddCarroOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCarroVenda.resx">
+      <DependentUpon>AddCarroVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCliente.resx">
+      <DependentUpon>AddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVenda.resx">
+      <DependentUpon>AddVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminarServico.resx">
+      <DependentUpon>ExaminarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarServico.resx">
+      <DependentUpon>AdicionarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCarroAluguer.resx">
+      <DependentUpon>EditarCarroAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCarroOficina.resx">
+      <DependentUpon>EditarCarroOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCarroVenda.resx">
+      <DependentUpon>EditarCarroVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarParcela.resx">
+      <DependentUpon>EditarParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarServico.resx">
+      <DependentUpon>EditarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarVendas.resx">
+      <DependentUpon>EditarVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EscolherEmailParaEnviar.resx">
+      <DependentUpon>EscolherEmailParaEnviar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminarAluguer.resx">
+      <DependentUpon>ExaminarAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminarCarroAluguer.resx">
+      <DependentUpon>ExaminarCarroAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminarVenda.resx">
+      <DependentUpon>ExaminarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoDeAdministradores.resx">
+      <DependentUpon>GestaoDeAdministradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoDeAluguer.resx">
+      <DependentUpon>GestaoDeAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoDeClientes.resx">
+      <DependentUpon>GestaoDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoDeOficina.resx">
+      <DependentUpon>GestaoDeOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoDeVendas.resx">
+      <DependentUpon>GestaoDeVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_inicial.resx">
+      <DependentUpon>Menu_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="BaseDeDados.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaseDeDados.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BaseDeDados.edmx.diagram">
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ProjetoCsharDataSet.xsc">
+      <DependentUpon>ProjetoCsharDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjetoCsharDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjetoCsharDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjetoCsharDataSet.xss">
+      <DependentUpon>ProjetoCsharDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Cliente.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseDeDados.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BaseDeDados.Context.cs</LastGenOutput>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Content>
+    <Content Include="BaseDeDados.edmx.sql" />
+    <Content Include="BaseDeDados.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BaseDeDados.cs</LastGenOutput>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
