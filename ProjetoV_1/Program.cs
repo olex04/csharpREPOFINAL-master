@@ -16,7 +16,7 @@ namespace ProjetoV_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_inicial());
+            Application.Run(new Form_Menu_inicial());
         }
     }
 }
